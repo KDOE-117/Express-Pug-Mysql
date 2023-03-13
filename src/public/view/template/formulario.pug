@@ -1,0 +1,22 @@
+extends ../layout/layout
+
+block variables
+    - let styleName = '../style/form.css';
+    - let scriptRoute = 'js/form.js';
+block content
+    .container
+        .sectCont
+            .titleCont
+                h1.titleForm Form PUG
+            form(action="/formulario" method="post" autocomplete="off" class="formCont")
+                div(class="name cont")
+                    label Your Name
+                    input(type="text", name="nombre" class="inputForm")
+                div(class="password cont")
+                    label Your Password 
+                    input(type="password", name="contraseña" class="inputForm")
+                div(class="mail cont")
+                    label Your Email
+                    input(type="email", name="email" class="inputForm")
+                div(class="sendBtn cont")
+                    input(type="submit", value="SEND" class="inputForm")
